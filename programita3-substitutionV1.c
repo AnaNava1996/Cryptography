@@ -1,4 +1,4 @@
-#include <stdio.h>//agregar una llave.... para hacer un corrimiento si la lalve es 1, devolver a->B 32+1
+#include <stdio.h>
 
 int escritura(int c,int op){
   FILE *archi;
