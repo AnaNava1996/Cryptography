@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<title>Affine Cipher (Encrypt)</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="w3.css">
+<body  background="background.jpg">
+
+<div class="w3-card-4 w3-display-middle" style="width:50%;">
+  <header class="w3-container w3-black">
+    <h1>Affine Cipher (Encrypt)</h1>
+  </header>
+  <br/>
+  <div>
+    <input class="w3-quarter w3-input w3-border" type="text" placeholder="message" id="message">
+  </div><br/><br/><br/>
+  <div>
+    <input class="w3-quarter w3-input w3-border" type="text" placeholder="mod" id="modulo">
+  </div><br/><br/><br/>
+  <div>
+    <input class="w3-quarter w3-input w3-border" type="text" placeholder="&#945;" id="alpha">
+  </div><br/><br/><br/>
+  <div>
+    <input class="w3-quarter w3-input w3-border" type="text" placeholder="&#946;" id="beta">
+  </div><br/><br/><br/>
+  <div>
+    <button class="w3-qarter w3-button w3-black w3-padding-small" onclick="encrypt();">Encrypt</button>
+  </div>
+  <div>
+    <input class="w3-quarter w3-input w3-border" type="text" placeholder="ciphertext" id="ciphertext">
+  </div><br/><br/><br/>
+  <footer class="w3-container w3-black">
+    <h5> . </h5>
+  </footer>
+</div>
+
+<script>
+function encrypt(){
+  var modulo=parseInt(document.getElementById("modulo").value);
+  var alpha=parseInt(document.getElementById("alpha").value);
+  var beta=parseInt(document.getElementById("beta").value);
+  res=euclidex(alpha,modulo);
+  if(res[2]>1){
+    alert("Invalid alpha, must be...gdc(alpha,modulo)=1");}
+  else{
+    var message=document.getElementById("message").value;
+    var ciphertext="";
+    for(var i=0;i<message.length;i++){
+      ciphertext=ciphertext.concat(String.fromCharCode(((((message.charCodeAt(i)-97)*alpha)+beta)%modulo)+65));}
+    document.getElementById("ciphertext").value=ciphertext;}
+}
+
+function euclidex(a,b){
+  if(a%b==0){
+    return [0,1,b];
+  }
+  else{
+    var temp=euclidex(b,a%b);
+    m=temp[0];
+    n=temp[1];
+    r=temp[2];
+    return [n,m-parseInt(a/b)*n,r];
+  }
+}
+
+</script>
+</body>
+</html>

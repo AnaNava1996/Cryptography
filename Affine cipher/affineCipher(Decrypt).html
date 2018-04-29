@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<title>Affine Cipher (Decrypt)</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="w3.css">
+<body  background="background.jpg">
+
+<div class="w3-card-4 w3-display-middle" style="width:50%;">
+  <header class="w3-container w3-black">
+    <h1>Affine Cipher (Decrypt)</h1>
+  </header>
+  <br/>
+  <div>
+    <input class="w3-quarter w3-input w3-border" type="text" placeholder="ciphertext" id="ciphertext">
+  </div><br/><br/><br/>
+  <div>
+    <input class="w3-quarter w3-input w3-border" type="text" placeholder="mod" id="modulo">
+  </div><br/><br/><br/>
+  <div>
+    <input class="w3-quarter w3-input w3-border" type="text" placeholder="&#945;" id="alpha">
+  </div><br/><br/><br/><!--Alfa debe ser primo relativo del modulo!!!-->
+  <div>
+    <input class="w3-quarter w3-input w3-border" type="text" placeholder="&#946;" id="beta">
+  </div><br/><br/><br/>
+  <div>
+    <button class="w3-qarter w3-button w3-black w3-padding-small" onclick="decrypt();">Decrypt</button>
+  </div>
+  <div>
+    <input class="w3-quarter w3-input w3-border" type="text" placeholder="plaintext" id="plaintext">
+  </div><br/><br/><br/>
+  <footer class="w3-container w3-black">
+    <h5> . </h5>
+  </footer>
+</div>
+
+
+<script>
+function decrypt(){
+  var modulo=parseInt(document.getElementById("modulo").value);
+  var alpha=parseInt(document.getElementById("alpha").value);
+  var beta=parseInt(document.getElementById("beta").value);
+  res=euclidex(alpha,modulo);
+  if(res[2]>1){
+    alert("Invalid alpha, must be...gdc(alpha,modulo)=1");}
+  else{
+    if(res[0]<0){
+        alpha=modulo+res[0];}
+    else{
+        alpha=res[0];}
+    beta=modulo-(beta%modulo);
+    var ciphertext=document.getElementById("ciphertext").value;
+    var plaintext="";
+    for(var i=0;i<ciphertext.length;i++){
+      plaintext=plaintext.concat(String.fromCharCode(((((ciphertext.charCodeAt(i)-65+beta)*alpha))%modulo)+97));}
+    document.getElementById("plaintext").value=plaintext;}
+}
+
+function euclidex(a,b){
+  if(a%b==0){
+    return [0,1,b];
+  }
+  else{
+    var temp=euclidex(b,a%b);
+    m=temp[0];
+    n=temp[1];
+    r=temp[2];
+    return [n,m-parseInt(a/b)*n,r];
+  }
+}
+
+
+</script>
+</body>
+</html>
