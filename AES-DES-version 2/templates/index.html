@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<title>AES & DES</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="static/w3.css">
+<style> .selection option{ text-align:center; } </style>
+<body  background="static/background.jpg">
+<div class="w3-card-4 w3-display-middle" style="width:80%;">
+  <header class="w3-container w3-black">
+    <h1>AES & DES</h1>
+  </header>
+  <br/><br/>
+  <img src="static/twitter.bmp" class="w3-border w3-round-xxlarge" style="display:block;margin-left:auto;margin-right:auto;">
+  <br/><br/>
+  <br/><br/>
+  <div class="w3-row-padding">
+    <div class="w3-half w3-container">
+      <img id="cifrado_img" class="w3-border w3-round-xxlarge" style="display:block;margin-left:auto;margin-right:auto;width:35%">
+    </div>
+    <div class="w3-half w3-container">
+      <img id="descifrado_img" class="w3-border w3-round-xxlarge" style="display:block;margin-left:auto;margin-right:auto;width:35%">
+    </div>
+  </div>
+  <br/><br/>
+  <div style="text-align:center;" class="w3-row-padding">
+    <select id="cifrado" class="w3-light-blue w3-padding-16 w3-col m6 l6">
+      <option value=""disabled selected>Seleccione el cifrado</option>
+      <option value="DES-CBC">DES-CBC</option>
+      <option value="DES-CFB">DES-CFB</option>
+      <option value="DES-ECB">DES-ECB</option>
+      <option value="DES-OFB">DES-OFB</option>
+      <option value="AES-CBC">AES-CBC</option>
+      <option value="AES-CFB">AES-CFB</option>
+      <option value="AES-ECB">AES-ECB</option>
+      <option value="AES-OFB">AES-OFB</option>
+    </select>
+
+    <select id="descifrado" class="w3-light-blue w3-padding-16 w3-col m6 l6" style="border:none">
+      <option value=""disabled selected>Seleccione el descifrado</option>
+      <option value="DES-CBC">DES-CBC</option>
+      <option value="DES-CFB">DES-CFB</option>
+      <option value="DES-ECB">DES-ECB</option>
+      <option value="DES-OFB">DES-OFB</option>
+      <option value="AES-CBC">AES-CBC</option>
+      <option value="AES-CFB">AES-CFB</option>
+      <option value="AES-ECB">AES-ECB</option>
+      <option value="AES-OFB">AES-OFB</option>
+    </select>
+    <button class="w3-button w3-block w3-section w3-black w3-ripple w3-padding" onclick="cifdes()">
+      Cifrar
+    </button>
+    <button class="w3-button w3-block w3-section w3-black w3-ripple w3-padding" onclick="cifdes()">
+      Descifrar
+    </button>
+  </div>
+  <footer class="w3-container w3-black">
+    <h5> . </h5>
+  </footer>
+</div>
+</body>
+<script src="static/main.js"></script>
+</html>
