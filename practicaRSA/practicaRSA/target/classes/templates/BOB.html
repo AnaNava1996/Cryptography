@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html>
+<title>Bob's CV</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-blue-grey.css">
+<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Open+Sans'>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+html,body,h1,h2,h3,h4,h5 {font-family: "Open Sans", sans-serif}
+</style>
+<body class="w3-theme-l5">
+
+<!-- Navbar -->
+<div class="w3-top">
+ <div class="w3-bar w3-theme-d2 w3-left-align w3-large">
+  <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-theme-d2" href="javascript:void(0);" onclick="openNav()"><i class="fa fa-bars"></i></a>
+  <a href="https://www.facebook.com/ana.p.nava.1" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" title="Facebook"><i class="fa fa-facebook-square"></i></a>
+  <a href="https://github.com/AnaNava1996" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" title="Account Settings"><i class="fa fa-github"></i></a>
+  <a href="https://www.linkedin.com/in/ana-paola-nava-vivas-6508b2114/" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" title="Messages"><i class="fa fa-linkedin"></i></a>
+ </div>
+</div>
+
+<!-- Navbar on small screens -->
+<div id="navDemo" class="w3-bar-block w3-theme-d2 w3-hide w3-hide-large w3-hide-medium w3-large">
+  <a href="#" class="w3-bar-item w3-button w3-padding-large">Link 1</a>
+  <a href="#" class="w3-bar-item w3-button w3-padding-large">Link 2</a>
+  <a href="#" class="w3-bar-item w3-button w3-padding-large">Link 3</a>
+  <a href="#" class="w3-bar-item w3-button w3-padding-large">My Profile</a>
+</div>
+
+<!-- Page Container -->
+<div class="w3-container w3-content" style="max-width:1400px;margin-top:80px">
+  <!-- The Grid -->
+  <div class="w3-row">
+    <!-- Left Column -->
+    <div class="w3-col m3">
+      <!-- Profile -->
+      <div class="w3-card w3-round w3-white">
+        <div class="w3-container">
+         <h4 class="w3-center">Bob</h4>
+         <p class="w3-center"><th:src="@{/BOB.jpg}" style="height:250px;" alt="Bob"></p>
+         <hr>
+         <p><i class="fa fa-pencil fa-fw w3-margin-right w3-text-theme"></i> Computer Systems Engineer</p>
+         <p><i class="fa fa-institution fa-fw w3-margin-right w3-text-theme"></i> (Escom - IPN)</p>
+         <p><i class="fa fa-home fa-fw w3-margin-right w3-text-theme"></i> Mexico City, México</p>
+         <p><i class="fa fa-birthday-cake fa-fw w3-margin-right w3-text-theme"></i> May 10, 1996</p>
+        </div>
+      </div>
+      <br>
+
+      <div class="w3-card w3-round w3-white w3-center">
+        <div class="w3-container">
+          <p>Technologies</p>
+          <p>
+            <span class="w3-tag w3-small w3-theme">Git</span>
+            <span class="w3-tag w3-small w3-theme-l1">w3.css</span>
+            <span class="w3-tag w3-small w3-theme-l2">Django</span>
+            <span class="w3-tag w3-small w3-theme-l3">Spring Framework</span>
+            <span class="w3-tag w3-small w3-theme-l4">Flask</span>
+            <span class="w3-tag w3-small w3-theme-l5">jQuery</span>
+          </p>
+        </div>
+        <br>
+      </div><br>
+
+      <div class="w3-card w3-round w3-white w3-center">
+        <div class="w3-container">
+          <h4>Courses</h4>
+          <p><strong>Echoes in space</strong> (Introduction to Radar Remote Sensing) imparted by EO College.</p>
+          <p><strong>Java Básico</strong> imparted by IPN - Computer Research Center.</p>
+        </div>
+        <br>
+      </div><br>
+
+      <!-- Interests -->
+      <div class="w3-card w3-round w3-white w3-hide-small">
+        <div class="w3-container">
+          <p>Interests</p>
+          <p>
+            <span class="w3-tag w3-small w3-theme-d5">News</span>
+            <span class="w3-tag w3-small w3-theme-d4">Traveling</span>
+            <span class="w3-tag w3-small w3-theme-d3">Labels</span>
+            <span class="w3-tag w3-small w3-theme-d2">Games</span>
+            <span class="w3-tag w3-small w3-theme-d1">Friends</span>
+            <span class="w3-tag w3-small w3-theme">Books</span>
+            <span class="w3-tag w3-small w3-theme-l1">Friends</span>
+            <span class="w3-tag w3-small w3-theme-l2">Food</span>
+            <span class="w3-tag w3-small w3-theme-l3">Design</span>
+            <span class="w3-tag w3-small w3-theme-l4">Art</span>
+            <span class="w3-tag w3-small w3-theme-l5">Photos</span>
+          </p>
+        </div>
+      </div>
+      <br>
+
+    <!-- End Left Column -->
+    </div>
+
+    <!-- Middle Column -->
+    <div class="w3-col m7">
+
+      <div class="w3-row-padding">
+        <div class="w3-col m12">
+          <div class="w3-card w3-round w3-white">
+            <div class="w3-container w3-padding">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="w3-container w3-card w3-white w3-round w3-margin"><br>
+          <h4>Llave Púbica de Bob</h4>
+          <hr class="w3-clear">
+          <p th:text="*{aes.puk}" style="word-wrap: break-word;"></p>
+          <br/><br/>
+          <a class="w3-button w3-black" href="ana">Regresar</a>
+          <br><br>
+      </div>
+
+
+      <div class="w3-container w3-card w3-white w3-round w3-margin"><br>
+        <h4>TIENES UN MENSAJE NUEVO</h4><br>
+        <!-- METER AQUI LAS VARIABLES -->
+        <!--p th:text="*{aes.aes}"></p-->
+        <hr class="w3-clear">
+        <p> <span th:text="${aes.message}"></span> </p>
+          <div class="w3-row-padding" style="margin:0 -16px">
+        </div>
+      </div>
+
+      <div class="w3-container w3-card w3-white w3-round w3-margin"><br>
+        <img src="togomx.png" class="w3-left w3-margin-right" style="width:200px">
+        <h4></h4><br>
+        <hr class="w3-clear">
+        <p>From October 2017 to March 2018 I worked in Togomx. My roll with this start up consisted in being a technology and project consultant. Also, the team I was part of, found a solution for stock inconsistencies.</p>
+      </div>
+    <!-- End Middle Column -->
+    </div>
+
+    <!-- Right Column -->
+    <div class="w3-col m2">
+      <div class="w3-card w3-round w3-white w3-center">
+        <div class="w3-container">
+          <h3>Languages</h3>
+          <img src="idiomas.png" alt="Forest" style="width:45%;">
+          <p><strong>English (B2)</strong></p>
+          <p><strong>Italiano (B1)</strong></p>
+          <p><strong>Español (Native)</strong></p>
+        </div>
+      </div>
+      <br>
+
+      <div class="w3-card w3-round w3-white w3-center">
+        <div class="w3-container">
+          <p>Programming Languages</p>
+          <img src="hipster.jpg" alt="Avatar" style="width:50%"><br><br>
+          <span class="w3-tag w3-small w3-theme-d5">Java</span>
+          <span class="w3-tag w3-small w3-theme-d4">C</span>
+          <span class="w3-tag w3-small w3-theme-d3">C++</span>
+          <span class="w3-tag w3-small w3-theme-d2">Python</span>
+          <span class="w3-tag w3-small w3-theme-d1">SQL? (is it a PL?)</span>
+          <span class="w3-tag w3-small w3-theme">Perl</span>
+          <span class="w3-tag w3-small w3-theme-l1">Assembly(basic)</span>
+          <span class="w3-tag w3-small w3-theme-l2">html</span>
+          <span class="w3-tag w3-small w3-theme-l3">Css</span>
+          <span class="w3-tag w3-small w3-theme-l4">JavaScript</span>
+          <span class="w3-tag w3-small w3-theme-l5">Matlab (basic)</span>
+        </div>
+        <br>
+      </div>
+
+      <br>
+
+      <div class="w3-card w3-round w3-white w3-center">
+        <div class="w3-container">
+          <p>Software</p>
+          <span class="w3-tag w3-small w3-theme">Visual Stdio</span>
+          <span class="w3-tag w3-small w3-theme-l1">Linux</span>
+          <span class="w3-tag w3-small w3-theme-l2">Lattice</span>
+          <span class="w3-tag w3-small w3-theme-l3">Netbeans</span>
+          <span class="w3-tag w3-small w3-theme-l4">UML Studio</span>
+          <span class="w3-tag w3-small w3-theme-l5">Matlab</span>
+        </div>
+        <br>
+      </div><br>
+
+
+      <div class="w3-card w3-round w3-white w3-padding-16 w3-center">
+        <p>Manejo Standar :P</p>
+      </div>
+      <br>
+
+    <!-- End Right Column -->
+    </div>
+
+  <!-- End Grid -->
+  </div>
+
+<!-- End Page Container -->
+</div>
+<br>
+
+<!-- Footer -->
+<footer class="w3-container w3-theme-d3 w3-padding-16">
+  <h5>.</h5>
+</footer>
+
+<footer class="w3-container w3-theme-d5">
+  <p> .</p>
+</footer>
+
+<script>
+// Accordion
+function myFunction(id) {
+    var x = document.getElementById(id);
+    if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+        x.previousElementSibling.className += " w3-theme-d1";
+    } else {
+        x.className = x.className.replace("w3-show", "");
+        x.previousElementSibling.className =
+        x.previousElementSibling.className.replace(" w3-theme-d1", "");
+    }
+}
+
+// Used to toggle the menu on smaller screens when clicking on the menu button
+function openNav() {
+    var x = document.getElementById("navDemo");
+    if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+    } else {
+        x.className = x.className.replace(" w3-show", "");
+    }
+}
+</script>
+
+</body>
+</html>

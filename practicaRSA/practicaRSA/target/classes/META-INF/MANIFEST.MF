@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Implementation-Title: practicaRSA
+Implementation-Version: 0.0.1-SNAPSHOT
+Built-By: ana_n
+Implementation-Vendor-Id: com.practicaRSA
+Build-Jdk: 1.8.0_162
+Implementation-URL: https://projects.spring.io/spring-boot/#/spring-bo
+ ot-starter-parent/practicaRSA
+Created-By: Maven Integration for Eclipse
+
